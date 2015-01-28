@@ -27,6 +27,18 @@
         android:layout_below="@+id/button"
         android:layout_marginTop="48dp"
         android:text="TextView"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        style="@style/basic_text"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="48dp"
+        android:text="TextView1"
+        android:textSize="30dp"
+        style="@style/green_basic_text"/>
 
 </RelativeLayout>
