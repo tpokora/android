@@ -26,46 +26,37 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /**
         button = (Button) findViewById(R.id.button);
         textView = (TextView) findViewById(R.id.textView);
         button.setText("I am button!");
         textView.setTextColor(Color.GREEN);
         textView.setText("I am green text!");
-
-        /**
-         * first version of adding listener too a button
-         *
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Whiskey!", Toast.LENGTH_SHORT).show();
-            }
-        };
-        button.setOnClickListener(listener);
-        **/
-
-        /**
-         *
-         * second version of adding listener to a button
-         *
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Burbon!", Toast.LENGTH_SHORT).show();
-            }
-        });
          */
+        Log.d("Message!", "Create!");
     }
 
-    /** third version of adding button listener
-     *
-     * Complete with activity_main.xml
-     *
-     * @param v
-     */
+    @Override
+    public void onStop() {
+        Log.d("Message!", "Stop!");
+        super.onStop();
+    }
+
+    @Override
+    public void onPause() {
+        Log.d("Message!", "Pause!");
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        Log.d("Message!", "Resume!");
+        super.onResume();
+    }
 
     public void clickHandle(View v) {
         Toast.makeText(getApplicationContext(), "Black Tooth Grin!", Toast.LENGTH_SHORT).show();
+        Log.d("debug", "let's debug!");
     }
 
     @Override
