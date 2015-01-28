@@ -6,35 +6,29 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:hint="@string/hint"/>
 
     <Button
         android:id="@+id/button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_margin="30dp"
-        android:background="@color/lighgreen"
-        android:onClick="clickHandle"
-        android:text="Button"
-        android:textSize="30dp" />
+        android:layout_margin="10dp"
+        android:text="@string/button_text"
+        android:onClick="buttonClick"/>
 
     <TextView
-        android:id="@+id/textView"
-        style="@style/basic_text"
-        android:layout_width="wrap_content"
+        android:id="@+id/textview"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="TextView"
-        android:textSize="30dp" />
-
-    <TextView
-        android:id="@+id/textView1"
-        style="@style/green_basic_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="TextView1"
-        android:textSize="30dp" />
+        android:layout_margin="10dp"
+        android:textSize="30dp"
+        android:textColor="#fff"/>
 
 </LinearLayout>
