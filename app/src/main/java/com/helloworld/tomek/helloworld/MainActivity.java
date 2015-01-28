@@ -10,11 +10,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 
-public class MainActivity extends ActionBarActivity  {
+public class MainActivity extends ActionBarActivity {
 
     private Button button;
     private TextView textView;
@@ -28,5 +29,40 @@ public class MainActivity extends ActionBarActivity  {
         button.setText("I am button!");
         textView.setTextColor(Color.GREEN);
         textView.setText("I am green text!");
+
+        /**
+         * first version of adding listener too a button
+         *
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Whiskey!", Toast.LENGTH_SHORT).show();
+            }
+        };
+        button.setOnClickListener(listener);
+        **/
+
+        /**
+         *
+         * second version of adding listener to a button
+         *
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Burbon!", Toast.LENGTH_SHORT).show();
+            }
+        });
+         */
+    }
+
+    /** third version of adding button listener
+     *
+     * Complete with activity_main.xml
+     *
+     * @param v
+     */
+
+    public void clickHandle(View v) {
+        Toast.makeText(getApplicationContext(), "Black Tooth Grin!", Toast.LENGTH_SHORT).show();
     }
 }
