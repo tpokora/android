@@ -1,5 +1,6 @@
 package com.helloworld.tomek.helloworld;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +18,7 @@ public class MainActivity extends ActionBarActivity {
     private EditText edit;
     private Button button;
     private TextView textView;
+    private Button nextActivityButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class MainActivity extends ActionBarActivity {
         edit = (EditText) findViewById(R.id.edit);
         button = (Button) findViewById(R.id.button);
         textView = (TextView) findViewById(R.id.textview);
+        nextActivityButton = (Button) findViewById(R.id.nextActivityButton);
     }
 
     @Override
@@ -69,5 +72,13 @@ public class MainActivity extends ActionBarActivity {
 
     public void buttonClick(View v) {
         textView.setText("Hello, " + edit.getText().toString());
+    }
+
+    public void nextActivityButtonClick(View v) {
+        Intent i = new Intent(this, NewIntention.class);
+        if (!edit.getText().toString().equals("")) {
+            i.putExtra("name", edit.getText().toString());
+        }
+        startActivity(i);
     }
 }
