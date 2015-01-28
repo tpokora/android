@@ -3,7 +3,9 @@ package com.helloworld.tomek.helloworld;
 import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -64,5 +66,25 @@ public class MainActivity extends ActionBarActivity {
 
     public void clickHandle(View v) {
         Toast.makeText(getApplicationContext(), "Black Tooth Grin!", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        Log.d("Clicked", "x=" + id);
+        if (id == R.id.opt1) {
+            Log.d("click!", "Option 1");
+        } else if (id == R.id.opt2) {
+            Log.d("click!", "Option 2");
+        } else if (id == R.id.opt3) {
+            Log.d("click!", "Option 3");
+        }
+        return true;
     }
 }
