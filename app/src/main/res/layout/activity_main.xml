@@ -1,44 +1,53 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:background="@color/blackred"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
+    <TableRow android:id="@+id/tableRow1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="32dp"
-        android:text="Button"
-        android:textSize="30dp"
-        android:onClick="clickHandle"
-        android:background="@color/lighgreen"/>
+        android:padding="20dp">
 
-    <TextView
-        android:id="@+id/textView"
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Button"
+            android:textSize="30dp"
+            android:onClick="clickHandle"
+            android:background="@color/lighgreen"/>
+    </TableRow>
+
+    <TableRow android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button"
-        android:layout_below="@+id/button"
-        android:layout_marginTop="48dp"
-        android:text="TextView"
-        android:textSize="30dp"
-        style="@style/basic_text"/>
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/button"
+            android:layout_below="@+id/button"
+            android:layout_marginTop="48dp"
+            android:text="TextView"
+            android:textSize="30dp"
+            style="@style/basic_text"/>
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="48dp"
-        android:text="TextView1"
-        android:textSize="30dp"
-        style="@style/green_basic_text"/>
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="48dp"
+            android:text="TextView1"
+            android:textSize="30dp"
+            style="@style/green_basic_text"/>
+    </TableRow>
 
-</RelativeLayout>
+</TableLayout>
