@@ -11,9 +11,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:textColor="#fff"
-        android:textColorHint="#fff"
-        android:hint="@string/hint"/>
+        android:hint="@string/hint"
+        style="@style/editTextStyle" />
 
     <Button
         android:id="@+id/button"
@@ -21,7 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="@string/button_text"
-        android:onClick="buttonClick"/>
+        android:onClick="buttonClick"
+        style="@style/buttonStyle"/>
 
     <TextView
         android:id="@+id/textview"
@@ -29,13 +29,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:textSize="30dp"
-        android:textColor="#fff"/>
+        style="@style/editTextStyle" />
 
     <Button
         android:id="@+id/nextActivityButton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/next_activity"
-        android:onClick="nextActivityButtonClick"/>
+        android:text="@string/nextActivityButtonText"
+        android:onClick="nextActivityButtonClick"
+        style="@style/buttonStyle"/>
 
 </LinearLayout>

@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- MAIN -->
     <string name="app_name">HelloWorld</string>
-    <string name="textview">Siemanko!</string>
     <string name="action_settings">Settings</string>
-    <string name="button_text">Click me!</string>
-    <string name="author">About</string>
-    <string name="hint">Type your name</string>
     <string name="title_activity_new_intention">NewIntention</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="next_activity">Go to next Activity</string>
+    <string name="menuAbout">About</string>
+    <string name="menuHome">Home</string>
+    <!-- BUTTONS -->
+    <string name="button_text">Click me!</string>
+    <string name="nextActivityButtonText">Go to next Activity</string>
     <string name="onetButtonText">Go to onet.pl</string>
+    <string name="urlButtonText">Go to website</string>
+    <string name="contactButtonText">Send email</string>
+    <!-- TEXTVIEWS -->
+    <string name="textview">Siemanko!</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="aboutTextViewText">First Android application made by Tomasz Pokora</string>
+    <string name="aboutContact">Type message:</string>
+    <!-- OTHER -->
+    <string name="hint">Type your name</string>
+    <string name="urlEditHint">Type www adres</string>
+    <string name="title_activity_about">AboutActivity</string>
 
 </resources>

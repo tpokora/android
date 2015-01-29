@@ -61,11 +61,11 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
         Log.d("Clicked", "x=" + id);
         if (id == R.id.opt1) {
-            Log.d("click!", "Option 1");
+            Log.d("click!", "Home");
         } else if (id == R.id.opt2) {
-            Log.d("click!", "Option 2");
-        } else if (id == R.id.opt3) {
-            Log.d("click!", "Option 3");
+            Log.d("click!", "About");
+            Intent i = new Intent(this, AboutActivity.class);
+            startActivity(i);
         }
         return true;
     }

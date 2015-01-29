@@ -15,4 +15,17 @@
         <item name="android:textColor">#ff2c25cc</item>
     </style>
 
+    <style name="textViewStyle">
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="editTextStyle">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textColorHint">#666</item>
+    </style>
+
+    <style name="buttonStyle">
+        <item name="android:textColor">#fff</item>
+    </style>
+
 </resources>

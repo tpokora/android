@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -15,6 +17,8 @@ public class NewIntention extends ActionBarActivity {
 
     private TextView textView;
     private Button onetButton;
+    private EditText urlEditText;
+    private Button goToUrlButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +29,9 @@ public class NewIntention extends ActionBarActivity {
         textView = (TextView) findViewById(R.id.textView);
         textView.setText("Hello, " + name);
         onetButton = (Button) findViewById(R.id.onetButton);
+        urlEditText = (EditText) findViewById(R.id.urlEditText);
+        goToUrlButton = (Button) findViewById(R.id.urlButton);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -37,17 +42,18 @@ public class NewIntention extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        Log.d("Clicked", "x=" + id);
+        if (id == R.id.opt1) {
+            Log.d("click!", "Home");
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
+        } else if (id == R.id.opt2) {
+            Log.d("click!", "About");
+            Intent i = new Intent(this, AboutActivity.class);
+            startActivity(i);
         }
-
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 
     public void onetButtonClick(View v ) {
@@ -55,4 +61,14 @@ public class NewIntention extends ActionBarActivity {
         Intent i = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(i);
     }
+
+    public void goToUrlButtonClick(View v) {
+        if (!urlEditText.getText().toString().equals("")) {
+            String urlString = "http://" + urlEditText.getText().toString();
+            Uri uri = Uri.parse(urlString);
+            Intent i = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(i);
+        }
+    }
+
 }

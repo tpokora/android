@@ -13,9 +13,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#fff"
         android:textSize="30dp"
-        android:text="@string/hello_world" />
+        android:text="@string/hello_world"
+        style="@style/editTextStyle" />
 
     <Button
         android:id="@+id/onetButton"
@@ -24,6 +24,26 @@
         android:layout_below="@+id/textView"
         android:layout_marginTop="20dp"
         android:text="@string/onetButtonText"
-        android:onClick="onetButtonClick"/>
+        android:onClick="onetButtonClick"
+        style="@style/buttonStyle"/>/>
+
+    <EditText
+        android:id="@+id/urlEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/onetButton"
+        android:layout_marginTop="20dp"
+        android:hint="@string/urlEditHint"
+        style="@style/editTextStyle" />
+
+    <Button
+        android:id="@+id/urlButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/urlEditText"
+        android:layout_marginTop="20dp"
+        android:text="@string/urlButtonText"
+        android:onClick="goToUrlButtonClick"
+        style="@style/buttonStyle"/>
 
 </RelativeLayout>

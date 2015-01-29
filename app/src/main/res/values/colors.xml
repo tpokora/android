@@ -2,4 +2,5 @@
 <resources>
     <color name="lighgreen">#ff6eff6a</color>
     <color name="blackred">#ff5a0508</color>
+    <color name="hintColor">#666</color>
 </resources>
