@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
     <item
-        android:id="@+id/opt1"
+        android:id="@+id/home"
         android:orderInCategory="100"
         android:title="@string/menuHome" />
 
@@ -12,7 +12,11 @@
         android:orderInCategory="100"
         android:title="@string/menuThread" />
     <item
-        android:id="@+id/opt2"
+        android:id="@+id/storage"
+        android:orderInCategory="100"
+        android:title="@string/menuStorage" />
+    <item
+        android:id="@+id/about"
         android:orderInCategory="100"
         android:title="@string/menuAbout"/>
 

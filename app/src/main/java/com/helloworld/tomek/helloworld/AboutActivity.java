@@ -37,11 +37,11 @@ public class AboutActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         Log.d("Clicked", "x=" + id);
-        if (id == R.id.opt1) {
+        if (id == R.id.home) {
             Log.d("click!", "Home");
             Intent i = new Intent(this, MainActivity.class);
             startActivity(i);
-        } else if (id == R.id.opt2) {
+        } else if (id == R.id.about) {
             Log.d("click!", "About");
         }
         return true;

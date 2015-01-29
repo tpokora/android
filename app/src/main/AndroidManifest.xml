@@ -40,6 +40,10 @@
             android:name=".MultithreadActivity"
             android:label="@string/title_activity_multithread" >
         </activity>
+        <activity
+            android:name=".StorageActivity"
+            android:label="@string/title_activity_storage" >
+        </activity>
     </application>
 
 </manifest>

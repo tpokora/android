@@ -60,15 +60,19 @@ public class MainActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         Log.d("Clicked", "x=" + id);
-        if (id == R.id.opt1) {
+        if (id == R.id.home) {
             Log.d("click!", "Home");
-        } else if (id == R.id.opt2) {
+        } else if (id == R.id.about) {
             Log.d("click!", "About");
             Intent i = new Intent(this, AboutActivity.class);
             startActivity(i);
         } else if (id == R.id.thread) {
             Log.d("click!", "Thread");
             Intent i = new Intent(this, MultithreadActivity.class);
+            startActivity(i);
+        } else if (id == R.id.storage) {
+            Log.d("click!", "Storage");
+            Intent i = new Intent(this, StorageActivity.class);
             startActivity(i);
         }
         return true;

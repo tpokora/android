@@ -1,6 +1,5 @@
 package com.helloworld.tomek.helloworld;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
@@ -12,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 
 public class MultithreadActivity extends ActionBarActivity {
@@ -79,11 +77,11 @@ public class MultithreadActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         Log.d("Clicked", "x=" + id);
-        if (id == R.id.opt1) {
+        if (id == R.id.home) {
             Log.d("click!", "Home");
             Intent i = new Intent(this, MainActivity.class);
             startActivity(i);
-        } else if (id == R.id.opt2) {
+        } else if (id == R.id.about) {
             Log.d("click!", "About");
             Intent i = new Intent(this, AboutActivity.class);
             startActivity(i);

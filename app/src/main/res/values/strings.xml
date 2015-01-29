@@ -8,6 +8,7 @@
     <string name="menuAbout">About</string>
     <string name="menuHome">Home</string>
     <string name="menuThread">Thread</string>
+    <string name="menuStorage">Storage</string>
     <!-- BUTTONS -->
     <string name="button_text">Click me!</string>
     <string name="nextActivityButtonText">Go to next Activity</string>
@@ -24,5 +25,8 @@
     <string name="urlEditHint">Type www adres</string>
     <string name="title_activity_about">AboutActivity</string>
     <string name="title_activity_multithread">MultithreadActivity</string>
+    <string name="title_activity_storage">StorageActivity</string>
+    <string name="headerLeftText">Name</string>
+    <string name="headerRightText">Number</string>
 
 </resources>
