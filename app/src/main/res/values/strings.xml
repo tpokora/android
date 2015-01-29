@@ -10,5 +10,6 @@
     <string name="title_activity_new_intention">NewIntention</string>
     <string name="hello_world">Hello world!</string>
     <string name="next_activity">Go to next Activity</string>
+    <string name="onetButtonText">Go to onet.pl</string>
 
 </resources>

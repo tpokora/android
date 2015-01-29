@@ -1,15 +1,20 @@
 package com.helloworld.tomek.helloworld;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
 public class NewIntention extends ActionBarActivity {
 
     private TextView textView;
+    private Button onetButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +24,7 @@ public class NewIntention extends ActionBarActivity {
         String name = bundle.getString("name");
         textView = (TextView) findViewById(R.id.textView);
         textView.setText("Hello, " + name);
+        onetButton = (Button) findViewById(R.id.onetButton);
     }
 
 
@@ -42,5 +48,11 @@ public class NewIntention extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onetButtonClick(View v ) {
+        Uri uri = Uri.parse("http://onet.pl");
+        Intent i = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(i);
     }
 }

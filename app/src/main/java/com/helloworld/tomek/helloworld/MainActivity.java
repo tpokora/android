@@ -71,14 +71,21 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void buttonClick(View v) {
-        textView.setText("Hello, " + edit.getText().toString());
+        if (!edit.getText().toString().equals("")) {
+            textView.setText("Hello, " + edit.getText().toString());
+        } else {
+            Toast.makeText(getApplicationContext(), "Please type your name!", Toast.LENGTH_LONG).show();
+        }
     }
 
     public void nextActivityButtonClick(View v) {
-        Intent i = new Intent(this, NewIntention.class);
         if (!edit.getText().toString().equals("")) {
+            Intent i = new Intent(this, NewIntention.class);
             i.putExtra("name", edit.getText().toString());
+            startActivity(i);
+        } else {
+            Toast.makeText(getApplicationContext(), "Please type your name!", Toast.LENGTH_LONG).show();
         }
-        startActivity(i);
+
     }
 }
