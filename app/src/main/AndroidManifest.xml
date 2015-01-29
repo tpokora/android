@@ -36,6 +36,10 @@
             android:name=".AboutActivity"
             android:label="@string/title_activity_about" >
         </activity>
+        <activity
+            android:name=".MultithreadActivity"
+            android:label="@string/title_activity_multithread" >
+        </activity>
     </application>
 
 </manifest>

@@ -66,6 +66,10 @@ public class MainActivity extends ActionBarActivity {
             Log.d("click!", "About");
             Intent i = new Intent(this, AboutActivity.class);
             startActivity(i);
+        } else if (id == R.id.thread) {
+            Log.d("click!", "Thread");
+            Intent i = new Intent(this, MultithreadActivity.class);
+            startActivity(i);
         }
         return true;
     }

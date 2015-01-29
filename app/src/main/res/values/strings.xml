@@ -7,6 +7,7 @@
     <string name="title_activity_new_intention">NewIntention</string>
     <string name="menuAbout">About</string>
     <string name="menuHome">Home</string>
+    <string name="menuThread">Thread</string>
     <!-- BUTTONS -->
     <string name="button_text">Click me!</string>
     <string name="nextActivityButtonText">Go to next Activity</string>
@@ -22,5 +23,6 @@
     <string name="hint">Type your name</string>
     <string name="urlEditHint">Type www adres</string>
     <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_multithread">MultithreadActivity</string>
 
 </resources>
