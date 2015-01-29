@@ -56,7 +56,7 @@ public class Database extends SQLiteOpenHelper {
         db.insertOrThrow("contact", null, values);
     }
 
-    public void deleteContact(int id) {
+    public void deleteContact(Long id) {
         SQLiteDatabase db = getWritableDatabase();
         String[] args = {"" + id};
         db.delete("contact", "id=?", args);
@@ -85,5 +85,4 @@ public class Database extends SQLiteOpenHelper {
         }
         return contact;
     }
-
 }

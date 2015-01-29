@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.helloworld.tomek.database.Database;
@@ -27,7 +26,6 @@ public class StorageActivity extends ActionBarActivity {
     private EditText newContactNameEditText;
     private EditText newContactNumberEditText;
     private Button addNewContactButton;
-    private static Database database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +38,6 @@ public class StorageActivity extends ActionBarActivity {
 
         listView = (ListView) findViewById(R.id.listView);
         populateList();
-        for (Contact c : list) {
-            Log.d("ID", c.getName() + ": " + c.getId());
-        }
         adapter = new ListViewAdapter(this, list);
         listView.setAdapter(adapter);
     }
@@ -86,9 +81,10 @@ public class StorageActivity extends ActionBarActivity {
             Contact contact = new Contact();
             contact.setName(newContactName);
             contact.setNumber(newContactNumber);
-            list.add(contact);
             db.addContact(contact);
-            adapter.notifyDataSetChanged();
+            populateList();
+            adapter = new ListViewAdapter(this, list);
+            listView.setAdapter(adapter);
             clearNewContactEditText();
         } else {
             Toast.makeText(getApplicationContext(), "Complete contact details!", Toast.LENGTH_LONG).show();
