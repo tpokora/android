@@ -15,6 +15,7 @@
     <string name="onetButtonText">Go to onet.pl</string>
     <string name="urlButtonText">Go to website</string>
     <string name="contactButtonText">Send email</string>
+    <string name="addNewContactButtonText">Add Contact</string>
     <!-- TEXTVIEWS -->
     <string name="textview">Siemanko!</string>
     <string name="hello_world">Hello world!</string>
@@ -28,5 +29,9 @@
     <string name="title_activity_storage">StorageActivity</string>
     <string name="headerLeftText">Name</string>
     <string name="headerRightText">Number</string>
+
+    <!-- HINTS -->
+    <string name="newContactNameEditTextHint">Type name</string>
+    <string name="newContactNumberEditTextHint">Type number</string>
 
 </resources>

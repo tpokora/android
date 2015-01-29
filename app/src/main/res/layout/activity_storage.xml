@@ -2,37 +2,75 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/blackred">
+    android:background="@color/blackred"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/newContactNameEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/newContactNameEditTextHint"
+                style="@style/editTextStyle"/>
+
+            <EditText
+                android:id="@+id/newContactNumberEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/newContactNumberEditTextHint"
+                android:inputType="phone"
+                style="@style/editTextStyle"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/addContactButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/addNewContactButtonText"
+            android:onClick="addNewContactButtonClick"
+            style="@style/buttonStyle"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="#006"
-        >
-        <TextView android:id="@+id/headerLeft"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/headerLeft"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/headerLeftText"
-            android:textColor="#AAA"
             android:textAlignment="center"
-            />
-        <TextView android:id="@+id/headerRight"
+            android:textColor="#AAA" />
+
+        <TextView
+            android:id="@+id/headerRight"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/headerRightText"
-            android:textColor="#AAA"
             android:textAlignment="center"
-            />
+            android:textColor="#AAA" />
     </LinearLayout>
 
     <ListView
         android:id="@+id/listView"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-    </ListView>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
 
 </LinearLayout>

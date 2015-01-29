@@ -6,8 +6,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.helloworld.tomek.database.Database;
 import com.helloworld.tomek.database.entity.Contact;
@@ -20,14 +24,25 @@ public class StorageActivity extends ActionBarActivity {
     private ListView listView;
     private ArrayList<Contact> list;
     private ListViewAdapter adapter;
+    private EditText newContactNameEditText;
+    private EditText newContactNumberEditText;
+    private Button addNewContactButton;
+    private static Database database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_storage);
 
+        newContactNameEditText = (EditText) findViewById(R.id.newContactNameEditText);
+        newContactNumberEditText = (EditText) findViewById(R.id.newContactNumberEditText);
+        addNewContactButton = (Button) findViewById(R.id.addContactButton);
+
         listView = (ListView) findViewById(R.id.listView);
         populateList();
+        for (Contact c : list) {
+            Log.d("ID", c.getName() + ": " + c.getId());
+        }
         adapter = new ListViewAdapter(this, list);
         listView.setAdapter(adapter);
     }
@@ -61,5 +76,27 @@ public class StorageActivity extends ActionBarActivity {
             startActivity(i);
         }
         return true;
+    }
+
+    public void addNewContactButtonClick(View v) {
+        String newContactName = newContactNameEditText.getText().toString();
+        String newContactNumber = newContactNumberEditText.getText().toString();
+        if (!newContactName.equals("") && !newContactNumber.equals("")) {
+            Database db = new Database(this);
+            Contact contact = new Contact();
+            contact.setName(newContactName);
+            contact.setNumber(newContactNumber);
+            list.add(contact);
+            db.addContact(contact);
+            adapter.notifyDataSetChanged();
+            clearNewContactEditText();
+        } else {
+            Toast.makeText(getApplicationContext(), "Complete contact details!", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private void clearNewContactEditText() {
+        newContactNameEditText.setText("");
+        newContactNumberEditText.setText("");
     }
 }
